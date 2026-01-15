@@ -25,6 +25,7 @@
 }
 
 .navLink {
+  position: relative; 
   color: #223843;
   text-decoration: none;
   font-weight: 500;
@@ -46,8 +47,8 @@
   font-weight: 600;
 }
 
-.activeLink::after {
-  content: "";
+.navLink::after {
+  content: "";                      
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -55,4 +56,11 @@
   height: 1px;
   background-color: #223843;
   border-radius: 1px;
+  transform: scaleX(0);      
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.activeLink::after {
+  transform: scaleX(1);
 }

@@ -27,6 +27,12 @@ export default function HomePage() {
           </>) : (<><p className={css.description}>
         Log in to manage your contacts — add, edit, and keep everything organized in one place.
       </p>
+      <ul className={css.descrList}>
+            <li><FiUserPlus /> <strong>Add</strong> new contacts with just a few clicks</li>
+            <li><FiEdit3 /> <strong>Edit</strong> existing contact details anytime</li>
+            <li><FiTrash2 /> <strong>Delete</strong> entries you no longer need</li>
+            <li><FiSearch /> <strong>Search</strong> and filter to find contacts</li>
+        </ul>
       <div className={css.buttonGroup}>
         <Link to="/login" className={clsx(css.button, css.primary)}>Log In</Link>
         <Link to="/register" className={clsx(css.button, css.outline)}>Register</Link>
